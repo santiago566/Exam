@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Rol_Pagos</string>
+    <string name="cedula">ced</string>
+    <string name="cargo">car</string>
+    <string name="funcionario">fn</string>
+    <string name="Area">area</string>
+    <string name="hijos">hijos</string>
+    <string name="horas">horas</string>
+    <string name="atrasado">atra</string>
+    <string name="estado">esatado</string>
+
 </resources>
