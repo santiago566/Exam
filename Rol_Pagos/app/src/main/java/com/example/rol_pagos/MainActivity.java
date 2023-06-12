@@ -13,7 +13,11 @@ import com.example.rol_pagos.bdd.BDHelper;
 
 
 public class MainActivity extends AppCompatActivity {
-    EditText et_subsidio,et_sueldo,et_cedula, et_cargo,et_funcionario, et_area,et_hijos,et_extra,et_atrasado,et_estado;
+    double sueldoFijo=0.00;
+    double subsidio=0.00;
+    double descuento=0.00;
+    double horasExtras=0.00;
+    EditText et_descuento,et_horasExtras,et_sueldoTotal,et_subsidio,et_sueldo,et_cedula, et_cargo,et_funcionario, et_area,et_hijos,et_extra,et_atrasado,et_estado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,17 +33,20 @@ public class MainActivity extends AppCompatActivity {
     et_estado=findViewById(R.id.esatado);
     et_sueldo=findViewById(R.id.txtSueldo);
     et_subsidio=findViewById(R.id.txtHijos);
+    et_descuento=findViewById(R.id.txtAtraso);
+    et_horasExtras=findViewById(R.id.txtHorasExtras);
+    et_sueldoTotal=findViewById(R.id.txtSueldoTotal);
 }
     public double determinarSueldo(String cargo){
-        double sueldo=0.00;
+
         //String cargo=et_cargo.getText().toString();
         if (cargo.equals("Administrativo")==true) {
-            sueldo=880.00;
+            sueldoFijo=880.00;
         }else if(cargo.equals("Docente")==true){
 
-            sueldo= 1000.00;
+            sueldoFijo= 1000.00;
         }
-        return sueldo;
+        return sueldoFijo;
     }
 
     public double subsidio(int numero){
@@ -49,10 +56,34 @@ public class MainActivity extends AppCompatActivity {
             sub=numero*50;
         }else{
             sub=0;
+            System.out.println("-----------------"+numero);
         }
         return sub;
     }
+    public double descuentoAtraso(String item,double sueldo){
+        double des=0.00;
+        if(item.equals("Si")==true){
+            des=sueldo*0.08;
+        }else{
+            des=0;
+        }
+        return des;
+    }
 
+    public double horasExtras(int numHoras){
+        double pagoHoras=0.00;
+        if(numHoras>0){
+            pagoHoras=numHoras*12.00;
+        }else{
+            pagoHoras=0.00;
+        }
+
+        return pagoHoras;
+    }
+
+    public double sueldoRecibir(double sueldoFijo,double subsidio,double descuento,double horasExtras){
+        return sueldoFijo+subsidio+horasExtras-descuento;
+    }
     public void registrar(View view){
         BDHelper admin=new BDHelper(this,"registro.db",null,1);
         SQLiteDatabase bd=admin.getWritableDatabase();
@@ -85,11 +116,19 @@ public class MainActivity extends AppCompatActivity {
             et_extra.setText("");
             et_atrasado.setText("");
             et_estado.setText("");
-            et_sueldo.setText(this.determinarSueldo(cargo)+"");
-            int numHijos=Integer.parseInt(hijos);
-            et_subsidio.setText(this.subsidio(numHijos)+"");
-
             bd.close();
+            sueldoFijo=this.determinarSueldo(cargo);
+            int numHijos=Integer.parseInt(hijos);
+            et_sueldo.setText(sueldoFijo+"");
+            subsidio=this.subsidio(numHijos);
+            et_subsidio.setText(subsidio+"");
+            descuento=this.descuentoAtraso(atrasado,sueldoFijo);
+            et_descuento.setText(descuento+"");
+            int horas=Integer.parseInt(extra);
+            horasExtras=this.horasExtras(horas);
+            et_horasExtras.setText(horasExtras+"");
+            et_sueldoTotal.setText(this.sueldoRecibir(sueldoFijo,subsidio,descuento,horasExtras)+"");
+
         }else{
             Toast.makeText(this,"FAVOR INGRESAR TODOS LOS CAMPOS",Toast.LENGTH_SHORT).show();
         }

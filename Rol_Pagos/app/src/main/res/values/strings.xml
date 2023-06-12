@@ -10,5 +10,9 @@
     <string name="estado">esatado</string>
     <string name="SueldoFijo">Sueldo</string>
     <string name="Subsidio">Subsidio</string>
+    <string name="Descuento">DescuentoAtrasos</string>
+    <string name="HorasExtras">HorasExtras</string>
+    <string name="SueldoTotal">Sueldo a Recibir</string>
+
 
 </resources>

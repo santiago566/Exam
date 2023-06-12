@@ -2935,6 +2935,7 @@ int id textSpacerNoTitle 0x7f0801af
 int id textStart 0x7f0801b0
 int id textTop 0x7f0801b1
 int id textView 0x7f0801b2
+int id textView13 0x7f0801ef
 int id textView2 0x7f0801b3
 int id textView3 0x7f0801b4
 int id textView4 0x7f0801b5
@@ -2968,10 +2969,15 @@ int id transition_position 0x7f0801d0
 int id transition_scene_layoutid_cache 0x7f0801d1
 int id transition_transform 0x7f0801d2
 int id triangle 0x7f0801d3
+int id txtAtraso 0x7f0801f0
+int id txtEAtraso 0x7f0801f1
 int id txtEHijos 0x7f0801ed
+int id txtEHorasExtras 0x7f0801f2
 int id txtESueldo 0x7f0801eb
 int id txtHijos 0x7f0801ee
+int id txtHorasExtras 0x7f0801f3
 int id txtSueldo 0x7f0801ec
+int id txtSueldoTotal 0x7f0801f4
 int id unchecked 0x7f0801d4
 int id uniform 0x7f0801d5
 int id unlabeled 0x7f0801d6
@@ -3172,8 +3178,11 @@ int mipmap ic_launcher 0x7f0c0000
 int mipmap ic_launcher_round 0x7f0c0001
 int plurals mtrl_badge_content_description 0x7f0d0000
 int string Area 0x7f0e0000
+int string Descuento 0x7f0e008e
+int string HorasExtras 0x7f0e008f
 int string Subsidio 0x7f0e008d
 int string SueldoFijo 0x7f0e008c
+int string SueldoTotal 0x7f0e0090
 int string abc_action_bar_home_description 0x7f0e0001
 int string abc_action_bar_up_description 0x7f0e0002
 int string abc_action_menu_overflow_description 0x7f0e0003

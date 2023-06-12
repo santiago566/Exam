@@ -2936,6 +2936,7 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView13
 id textView2
 id textView3
 id textView4
@@ -2969,10 +2970,15 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txtAtraso
+id txtEAtraso
 id txtEHijos
+id txtEHorasExtras
 id txtESueldo
 id txtHijos
+id txtHorasExtras
 id txtSueldo
+id txtSueldoTotal
 id unchecked
 id uniform
 id unlabeled
@@ -3173,8 +3179,11 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string Area
+string Descuento
+string HorasExtras
 string Subsidio
 string SueldoFijo
+string SueldoTotal
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

@@ -3,8 +3,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <string name="Area">area</string>
+    <string name="Descuento">DescuentoAtrasos</string>
+    <string name="HorasExtras">HorasExtras</string>
     <string name="Subsidio">Subsidio</string>
     <string name="SueldoFijo">Sueldo</string>
+    <string name="SueldoTotal">Sueldo a Recibir</string>
     <string name="app_name">Rol_Pagos</string>
     <string name="atrasado">atra</string>
     <string name="cargo">car</string>
