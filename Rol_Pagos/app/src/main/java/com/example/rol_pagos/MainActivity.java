@@ -13,7 +13,7 @@ import com.example.rol_pagos.bdd.BDHelper;
 
 
 public class MainActivity extends AppCompatActivity {
-    EditText et_cedula, et_cargo,et_funcionario, et_area,et_hijos,et_extra,et_atrasado,et_estado;
+    EditText et_subsidio,et_sueldo,et_cedula, et_cargo,et_funcionario, et_area,et_hijos,et_extra,et_atrasado,et_estado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +27,31 @@ public class MainActivity extends AppCompatActivity {
     et_extra=findViewById(R.id.horas);
     et_atrasado=findViewById(R.id.atra);
     et_estado=findViewById(R.id.esatado);
+    et_sueldo=findViewById(R.id.txtSueldo);
+    et_subsidio=findViewById(R.id.txtHijos);
 }
+    public double determinarSueldo(String cargo){
+        double sueldo=0.00;
+        //String cargo=et_cargo.getText().toString();
+        if (cargo.equals("Administrativo")==true) {
+            sueldo=880.00;
+        }else if(cargo.equals("Docente")==true){
+
+            sueldo= 1000.00;
+        }
+        return sueldo;
+    }
+
+    public double subsidio(int numero){
+        double sub=0.00;
+
+        if(numero>0){
+            sub=numero*50;
+        }else{
+            sub=0;
+        }
+        return sub;
+    }
 
     public void registrar(View view){
         BDHelper admin=new BDHelper(this,"registro.db",null,1);
@@ -61,6 +85,9 @@ public class MainActivity extends AppCompatActivity {
             et_extra.setText("");
             et_atrasado.setText("");
             et_estado.setText("");
+            et_sueldo.setText(this.determinarSueldo(cargo)+"");
+            int numHijos=Integer.parseInt(hijos);
+            et_subsidio.setText(this.subsidio(numHijos)+"");
 
             bd.close();
         }else{

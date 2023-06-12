@@ -8,5 +8,7 @@
     <string name="horas">horas</string>
     <string name="atrasado">atra</string>
     <string name="estado">esatado</string>
+    <string name="SueldoFijo">Sueldo</string>
+    <string name="Subsidio">Subsidio</string>
 
 </resources>

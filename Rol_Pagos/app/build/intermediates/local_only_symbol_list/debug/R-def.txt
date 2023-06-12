@@ -22,10 +22,16 @@ id textView6
 id textView7
 id textView8
 id textView9
+id txtEHijos
+id txtESueldo
+id txtHijos
+id txtSueldo
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher_round
 string Area
+string Subsidio
+string SueldoFijo
 string app_name
 string atrasado
 string cargo
