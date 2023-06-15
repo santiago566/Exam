@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         if(item.equals("Si")==true){
             des=sueldo*0.08;
         }else{
-            des=0;
+            des=0.00;
         }
         return des;
     }
