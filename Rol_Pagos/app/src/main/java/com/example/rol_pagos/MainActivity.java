@@ -2,6 +2,7 @@ package com.example.rol_pagos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
@@ -84,6 +85,19 @@ public class MainActivity extends AppCompatActivity {
     public double sueldoRecibir(double sueldoFijo,double subsidio,double descuento,double horasExtras){
         return sueldoFijo+subsidio+horasExtras-descuento;
     }
+
+    public void irMostrar(View view){
+        //El Intent representa la intención que tiene una app de realizar una tarea.
+        // Puedes usar intents para varias tareas; pero, en esta lección, tu intent inicia otra actividad.
+
+        Bundle parametros=new Bundle();
+        parametros.putString("sueldoFijo",sueldoFijo+"");
+
+
+        Intent intent = new Intent(this, MostrarNew.class);
+        intent.putExtras(parametros);
+        startActivity(intent);
+    }
     public void registrar(View view){
         BDHelper admin=new BDHelper(this,"registro.db",null,1);
         SQLiteDatabase bd=admin.getWritableDatabase();
@@ -128,6 +142,9 @@ public class MainActivity extends AppCompatActivity {
             horasExtras=this.horasExtras(horas);
             et_horasExtras.setText(horasExtras+"");
             et_sueldoTotal.setText(this.sueldoRecibir(sueldoFijo,subsidio,descuento,horasExtras)+"");
+            this.irMostrar(view);
+
+
 
         }else{
             Toast.makeText(this,"FAVOR INGRESAR TODOS LOS CAMPOS",Toast.LENGTH_SHORT).show();

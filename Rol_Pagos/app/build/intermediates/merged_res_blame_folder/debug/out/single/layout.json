@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\Usuario\\.jdks\\corretto-20.0.1\\daemon\\8.0\\com.example.rol_pagos.app-mergeDebugResources-39:\\layout\\fragment_second.xml",
+        "source": "C:\\Users\\Usuario\\.jdks\\corretto-20.0.1\\daemon\\8.0\\com.example.rol_pagos.app-main-42:\\layout\\fragment_second.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.jdks\\corretto-20.0.1\\daemon\\8.0\\com.example.rol_pagos.app-mergeDebugResources-39:\\layout\\fragment_first.xml",
+        "source": "C:\\Users\\Usuario\\.jdks\\corretto-20.0.1\\daemon\\8.0\\com.example.rol_pagos.app-main-42:\\layout\\fragment_first.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.jdks\\corretto-20.0.1\\daemon\\8.0\\com.example.rol_pagos.app-mergeDebugResources-39:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Usuario\\.jdks\\corretto-20.0.1\\daemon\\8.0\\com.example.rol_pagos.app-main-42:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.jdks\\corretto-20.0.1\\daemon\\8.0\\com.example.rol_pagos.app-mergeDebugResources-39:\\layout\\activity_mostrar_new2.xml",
+        "source": "C:\\Users\\Usuario\\.jdks\\corretto-20.0.1\\daemon\\8.0\\com.example.rol_pagos.app-main-42:\\layout\\activity_mostrar_new2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.jdks\\corretto-20.0.1\\daemon\\8.0\\com.example.rol_pagos.app-mergeDebugResources-39:\\layout\\activity_mostrar_new.xml",
+        "source": "C:\\Users\\Usuario\\.jdks\\corretto-20.0.1\\daemon\\8.0\\com.example.rol_pagos.app-main-42:\\layout\\activity_mostrar_new.xml"
+    },
+    {
+        "merged": "com.example.rol_pagos.app-mergeDebugResources-39:/layout/activity_mostrar_new2.xml",
+        "source": "com.example.rol_pagos.app-main-42:/layout/activity_mostrar_new2.xml"
+    },
+    {
+        "merged": "C:\\Users\\Usuario\\.jdks\\corretto-20.0.1\\daemon\\8.0\\com.example.rol_pagos.app-mergeDebugResources-39:\\layout\\content_mostrar_new.xml",
+        "source": "C:\\Users\\Usuario\\.jdks\\corretto-20.0.1\\daemon\\8.0\\com.example.rol_pagos.app-main-42:\\layout\\content_mostrar_new.xml"
+    }
+]

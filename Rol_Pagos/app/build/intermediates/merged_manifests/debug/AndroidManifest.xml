@@ -27,6 +27,11 @@
         android:testOnly="true"
         android:theme="@style/Theme.Rol_Pagos" >
         <activity
+            android:name="com.example.rol_pagos.MostrarNew"
+            android:exported="false"
+            android:label="@string/title_activity_mostrar_new"
+            android:theme="@style/Theme.Rol_Pagos" />
+        <activity
             android:name="com.example.rol_pagos.MainActivity"
             android:exported="true" >
             <intent-filter>
@@ -47,6 +52,13 @@
                 android:name="androidx.lifecycle.ProcessLifecycleInitializer"
                 android:value="androidx.startup" />
         </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
     </application>
 
 </manifest>
